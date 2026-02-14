@@ -13,8 +13,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- ✅ CSS Connected (root-level) -->
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
   <!-- Preloader -->
@@ -60,8 +62,9 @@
   <!-- HERO -->
   <main id="top">
     <section class="hero">
-      <!-- Video background (replace src with your own mp4 later) -->
-      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+      <!-- Video background (fallback poster works even if video blocked) -->
+      <video class="hero-video" autoplay muted loop playsinline
+        poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
         <source src="https://cdn.coverr.co/videos/coverr-lifting-weights-2706/1080p.mp4" type="video/mp4">
       </video>
 
@@ -143,38 +146,50 @@
         </div>
 
         <div class="grid">
-          <button class="card facility tilt reveal" data-title="Modern Gym" data-desc="Premium equipment, dedicated strength & cardio zones, clean environment, and trainer support." data-icon="fa-dumbbell">
-            <div class="icon"><i class="fas fa-dumbbell"></i></div>
+          <button class="card facility tilt reveal" data-title="Modern Gym"
+            data-desc="Premium equipment, dedicated strength & cardio zones, clean environment, and trainer support."
+            data-icon="fa-dumbbell">
+            <div class="icon"><i class="fa-solid fa-dumbbell"></i></div>
             <h3>Modern Gym</h3>
             <p>High-end workout spaces.</p>
           </button>
 
-          <button class="card facility tilt reveal" data-title="Swimming Pool" data-desc="Relax and train with a well-maintained pool, premium changing rooms, and comfort-first hygiene." data-icon="fa-person-swimming">
-            <div class="icon"><i class="fas fa-swimmer"></i></div>
+          <button class="card facility tilt reveal" data-title="Swimming Pool"
+            data-desc="Relax and train with a well-maintained pool, premium changing rooms, and comfort-first hygiene."
+            data-icon="fa-person-swimming">
+            <div class="icon"><i class="fa-solid fa-person-swimming"></i></div>
             <h3>Swimming Pool</h3>
             <p>Refresh. Recover. Repeat.</p>
           </button>
 
-          <button class="card facility tilt reveal" data-title="Luxury Spa" data-desc="A calm atmosphere with recovery-focused services, designed for relaxation and premium care." data-icon="fa-spa">
-            <div class="icon"><i class="fas fa-spa"></i></div>
+          <button class="card facility tilt reveal" data-title="Luxury Spa"
+            data-desc="A calm atmosphere with recovery-focused services, designed for relaxation and premium care."
+            data-icon="fa-spa">
+            <div class="icon"><i class="fa-solid fa-spa"></i></div>
             <h3>Luxury Spa</h3>
             <p>Recharge in style.</p>
           </button>
 
-          <button class="card facility tilt reveal" data-title="Sports Courts" data-desc="Premium play space for community sports, friendly matches, and elite fitness lifestyle." data-icon="fa-basketball">
-            <div class="icon"><i class="fas fa-basketball-ball"></i></div>
+          <button class="card facility tilt reveal" data-title="Sports Courts"
+            data-desc="Premium play space for community sports, friendly matches, and elite fitness lifestyle."
+            data-icon="fa-basketball">
+            <div class="icon"><i class="fa-solid fa-basketball"></i></div>
             <h3>Sports Courts</h3>
             <p>Play. Compete. Enjoy.</p>
           </button>
 
-          <button class="card facility tilt reveal" data-title="Banquet Hall" data-desc="Elegant hall setup for weddings, birthdays, and corporate events with premium ambience." data-icon="fa-champagne-glasses">
-            <div class="icon"><i class="fas fa-glass-cheers"></i></div>
+          <button class="card facility tilt reveal" data-title="Banquet Hall"
+            data-desc="Elegant hall setup for weddings, birthdays, and corporate events with premium ambience."
+            data-icon="fa-champagne-glasses">
+            <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
             <h3>Banquet Hall</h3>
             <p>Celebrations, elevated.</p>
           </button>
 
-          <button class="card facility tilt reveal" data-title="Garden & Lawn" data-desc="A lush outdoor lawn for events, family time, photos, and relaxing evenings." data-icon="fa-leaf">
-            <div class="icon"><i class="fas fa-leaf"></i></div>
+          <button class="card facility tilt reveal" data-title="Garden & Lawn"
+            data-desc="A lush outdoor lawn for events, family time, photos, and relaxing evenings."
+            data-icon="fa-leaf">
+            <div class="icon"><i class="fa-solid fa-leaf"></i></div>
             <h3>Garden & Lawn</h3>
             <p>Green luxury outdoors.</p>
           </button>
@@ -275,7 +290,7 @@
           <p class="subhead">Premium experience, real feedback.</p>
         </div>
 
-        <div class="slider reveal" aria-label="Testimonials slider">
+        <div class="slider reveal">
           <button class="slider-btn prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
 
           <div class="slides" id="slides">
@@ -425,6 +440,7 @@
     ✅ Thank you! We’ll contact you soon.
   </div>
 
-  <script src="app.js"></script>
+  <!-- ✅ JS Connected (root-level) -->
+  <script src="./app.js"></script>
 </body>
 </html>
