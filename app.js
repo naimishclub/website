@@ -17,8 +17,6 @@ toggle?.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open ? "true" : "false");
 });
-
-// Close menu on link click (mobile)
 document.querySelectorAll(".nav-link").forEach(a => {
   a.addEventListener("click", () => links?.classList.remove("open"));
 });
@@ -75,21 +73,15 @@ function openWhatsApp(message){
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
-// Book a visit button
 document.getElementById("bookVisitBtn")?.addEventListener("click", () => {
-  const msg = `Hi Naimish Club, I want to book a visit. Please share available time slots.`;
-  openWhatsApp(msg);
+  openWhatsApp("Hi Naimish Club, I want to book a visit. Please share available time slots.");
 });
-
-// Contact WhatsApp button
 document.getElementById("whatsAppEnquire")?.addEventListener("click", () => {
-  const msg = `Hi Naimish Club, I want to know membership plans and a quick visit time.`;
-  openWhatsApp(msg);
+  openWhatsApp("Hi Naimish Club, I want to know membership plans and a quick visit time.");
 });
 
 // ===== 3D TILT EFFECT =====
-const tiltEls = document.querySelectorAll(".tilt");
-tiltEls.forEach(el => {
+document.querySelectorAll(".tilt").forEach(el => {
   el.addEventListener("mousemove", (e) => {
     const rect = el.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -137,11 +129,9 @@ function closeModal(){
 }
 modalClose?.addEventListener("click", closeModal);
 modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 
 modalWhatsApp?.addEventListener("click", () => {
-  const msg = `Hi Naimish Club, I want details about ${lastFacilityTitle}. Please share timing and charges.`;
-  openWhatsApp(msg);
+  openWhatsApp(`Hi Naimish Club, I want details about ${lastFacilityTitle}. Please share timing and charges.`);
 });
 
 // ===== GALLERY LIGHTBOX (NEXT/PREV) =====
@@ -182,6 +172,7 @@ lbPrev?.addEventListener("click", (e) => { e.stopPropagation(); prevImg(); });
 lbNext?.addEventListener("click", (e) => { e.stopPropagation(); nextImg(); });
 
 document.addEventListener("keydown", (e) => {
+  if (modal?.classList.contains("open") && e.key === "Escape") closeModal();
   if (!lb.classList.contains("open")) return;
   if (e.key === "Escape") closeLightbox();
   if (e.key === "ArrowLeft") prevImg();
@@ -197,11 +188,8 @@ function setPlan(plan){
   priceEls.forEach(p => {
     const month = p.dataset.month;
     const year = p.dataset.year;
-    if (plan === "yearly") {
-      p.innerHTML = `₹${Number(year).toLocaleString("en-IN")} <span>/ year</span>`;
-    } else {
-      p.innerHTML = `₹${Number(month).toLocaleString("en-IN")} <span>/ month</span>`;
-    }
+    if (plan === "yearly") p.innerHTML = `₹${Number(year).toLocaleString("en-IN")} <span>/ year</span>`;
+    else p.innerHTML = `₹${Number(month).toLocaleString("en-IN")} <span>/ month</span>`;
   });
 }
 toggleBtns.forEach(btn => btn.addEventListener("click", () => setPlan(btn.dataset.plan)));
@@ -210,8 +198,7 @@ setPlan("monthly");
 // ===== BACK TO TOP =====
 const toTop = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
-  if (!toTop) return;
-  toTop.classList.toggle("show", window.scrollY > 600);
+  toTop?.classList.toggle("show", window.scrollY > 600);
 });
 toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
@@ -254,7 +241,6 @@ function renderDots(){
   for (let i=0; i<slideCount; i++){
     const d = document.createElement("button");
     d.className = "dot-btn" + (i === slideIndex ? " active" : "");
-    d.setAttribute("aria-label", `Go to slide ${i+1}`);
     d.addEventListener("click", () => goToSlide(i));
     dotsWrap.appendChild(d);
   }
@@ -276,15 +262,3 @@ let autoTimer = setInterval(() => goToSlide(slideIndex + 1), 4500);
 const sliderBox = document.querySelector(".slider");
 sliderBox?.addEventListener("mouseenter", () => clearInterval(autoTimer));
 sliderBox?.addEventListener("mouseleave", () => autoTimer = setInterval(() => goToSlide(slideIndex + 1), 4500));
-
-// Swipe (mobile)
-let startX = 0;
-sliderBox?.addEventListener("touchstart", (e) => startX = e.touches[0].clientX, { passive: true });
-sliderBox?.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
-  if (Math.abs(diff) > 40){
-    if (diff > 0) goToSlide(slideIndex - 1);
-    else goToSlide(slideIndex + 1);
-  }
-}, { passive: true });
