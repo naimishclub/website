@@ -1,127 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Naimish Club | Luxury Lifestyle Club in Hisar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Naimish Club | Luxury Lifestyle Club in Hisar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>Naimish Club</h2>
-    <ul>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Naimish Club</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#facilities">Facilities</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#pricing">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+      </ul>
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Luxury Lifestyle Experience</h1>
-        <p>Fitness • Wellness • Sports • Celebrations</p>
-        <a href="#pricing" class="btn">Explore Membership</a>
+      <a class="nav-cta" href="#pricing">Join Now</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Naimish Club Hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> Hisar’s Premium Lifestyle Club
+      </div>
+
+      <h1>Luxury Lifestyle Experience</h1>
+      <p>Fitness • Wellness • Sports • Celebrations — all in one destination.</p>
+
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary">Explore Membership</a>
+        <a href="#contact" class="btn btn-ghost">Book a Visit</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Premium Facilities</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">365</div>
+          <div class="stat-label">Days Open</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Member Focus</div>
+        </div>
+      </div>
     </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <div class="section-title">
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">About</p>
         <h2>About Naimish Club</h2>
-    </div>
-    <p>
-        Naimish Club is Hisar’s premium lifestyle destination offering world-class gym,
-        swimming pool, spa, sports courts, banquet hall, and lush garden space.
-        We combine health, recreation, and celebration into one exclusive experience.
-    </p>
-</section>
+        <p class="subhead">
+          Naimish Club is Hisar’s premium lifestyle destination with world-class gym, swimming pool,
+          spa, sports courts, banquet hall, and lush garden space — curated for comfort and excellence.
+        </p>
+      </div>
 
-<!-- FACILITIES -->
-<section id="facilities">
-    <div class="section-title">
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fa-solid fa-crown"></i>
+          <h3>Premium Experience</h3>
+          <p>High-end ambience, clean design, and services that feel exclusive from day one.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <h3>Wellness First</h3>
+          <p>Gym + spa + pool designed to support your routine, recovery, and lifestyle.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-champagne-glasses"></i>
+          <h3>Celebrate Better</h3>
+          <p>Banquet & lawn space for events, birthdays, and memorable family moments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Facilities</p>
         <h2>Our Facilities</h2>
-    </div>
-    <div class="facilities">
-        <div class="card"><i class="fas fa-dumbbell"></i><h3>Modern Gym</h3></div>
-        <div class="card"><i class="fas fa-swimmer"></i><h3>Swimming Pool</h3></div>
-        <div class="card"><i class="fas fa-spa"></i><h3>Luxury Spa</h3></div>
-        <div class="card"><i class="fas fa-basketball-ball"></i><h3>Sports Courts</h3></div>
-        <div class="card"><i class="fas fa-glass-cheers"></i><h3>Banquet Hall</h3></div>
-        <div class="card"><i class="fas fa-leaf"></i><h3>Garden & Lawn</h3></div>
-    </div>
-</section>
+        <p class="subhead">Everything you need — under one premium roof.</p>
+      </div>
 
-<!-- GALLERY -->
-<section id="gallery">
-    <div class="section-title">
-        <h2>Gallery</h2>
-    </div>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f" alt="Gym">
-        <img src="https://images.unsplash.com/photo-1562774053-701939374585" alt="Pool">
-        <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c" alt="Spa">
-    </div>
-</section>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Modern Gym</h3>
+          <p>Premium equipment, dedicated zones, and a clean training environment.</p>
+        </div>
 
-<!-- PRICING -->
-<section id="pricing">
-    <div class="section-title">
+        <div class="card">
+          <div class="icon"><i class="fas fa-swimmer"></i></div>
+          <h3>Swimming Pool</h3>
+          <p>Relax, train, and refresh with a well-maintained pool experience.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fas fa-spa"></i></div>
+          <h3>Luxury Spa</h3>
+          <p>Unwind with calm lighting and services designed for recovery.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fas fa-basketball-ball"></i></div>
+          <h3>Sports Courts</h3>
+          <p>Play and compete — a social space built for energy and community.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fas fa-glass-cheers"></i></div>
+          <h3>Banquet Hall</h3>
+          <p>Elegant hall setup for weddings, parties, and corporate gatherings.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fas fa-leaf"></i></div>
+          <h3>Garden & Lawn</h3>
+          <p>Lush outdoor area for events, photos, and relaxed evenings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Gallery</p>
+        <h2>Signature Spaces</h2>
+        <p class="subhead">Tap any photo to view.</p>
+      </div>
+
+      <div class="gallery">
+        <button class="gallery-item" data-img="https://images.unsplash.com/photo-1571902943202-507ec2618e8f">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f" alt="Gym" loading="lazy">
+          <span class="gallery-label">Gym</span>
+        </button>
+
+        <button class="gallery-item" data-img="https://images.unsplash.com/photo-1562774053-701939374585">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585" alt="Pool" loading="lazy">
+          <span class="gallery-label">Pool</span>
+        </button>
+
+        <button class="gallery-item" data-img="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c">
+          <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c" alt="Spa" loading="lazy">
+          <span class="gallery-label">Spa</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Membership</p>
         <h2>Membership Plans</h2>
-    </div>
-    <div class="pricing">
-        <div class="price-card">
-            <h3>Basic</h3>
-            <div class="price">₹2,500 / month</div>
-            <p>Gym Access</p>
-        </div>
-        <div class="price-card">
-            <h3>Premium</h3>
-            <div class="price">₹5,000 / month</div>
-            <p>Gym + Pool + Sports</p>
-        </div>
-        <div class="price-card">
-            <h3>Elite Family</h3>
-            <div class="price">₹9,000 / month</div>
-            <p>All Facilities + Event Discounts</p>
-        </div>
-    </div>
-</section>
+        <p class="subhead">Choose the lifestyle that matches your routine.</p>
+      </div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="section-title">
+      <div class="pricing">
+        <div class="price-card">
+          <div class="pill">Starter</div>
+          <h3>Basic</h3>
+          <div class="price">₹2,500 <span>/ month</span></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Gym Access</li>
+            <li><i class="fa-solid fa-check"></i> Locker Facility</li>
+            <li><i class="fa-solid fa-check"></i> Member Support</li>
+          </ul>
+          <a class="btn btn-ghost full" href="#contact">Enquire</a>
+        </div>
+
+        <div class="price-card featured">
+          <div class="pill">Most Popular</div>
+          <h3>Premium</h3>
+          <div class="price">₹5,000 <span>/ month</span></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Gym + Pool</li>
+            <li><i class="fa-solid fa-check"></i> Sports Courts</li>
+            <li><i class="fa-solid fa-check"></i> Priority Slots</li>
+          </ul>
+          <a class="btn btn-primary full" href="#contact">Join Premium</a>
+        </div>
+
+        <div class="price-card">
+          <div class="pill">Family</div>
+          <h3>Elite Family</h3>
+          <div class="price">₹9,000 <span>/ month</span></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> All Facilities</li>
+            <li><i class="fa-solid fa-check"></i> Event Discounts</li>
+            <li><i class="fa-solid fa-check"></i> Family Benefits</li>
+          </ul>
+          <a class="btn btn-ghost full" href="#contact">Enquire</a>
+        </div>
+      </div>
+
+      <p class="note">*Prices are indicative. Final plans may vary based on services and offers.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Contact</p>
         <h2>Contact Us</h2>
+        <p class="subhead">Share your details and we’ll get back quickly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Visit & Enquiries</h3>
+          <p class="muted">Hisar, Haryana</p>
+
+          <div class="contact-line">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 XXXXXXXXXX</span>
+          </div>
+          <div class="contact-line">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@naimishclub.com</span>
+          </div>
+
+          <div class="contact-mini">
+            <div>
+              <p class="mini-title">Hours</p>
+              <p class="muted">Mon–Sun: 6AM – 10PM</p>
+            </div>
+            <div>
+              <p class="mini-title">WhatsApp</p>
+              <p class="muted">Fast response</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+          <div class="field">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" placeholder="Enter your phone number" required>
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Tell us what you're looking for..."></textarea>
+          </div>
+          <button class="btn btn-primary full" type="submit">Send Inquiry</button>
+          <p class="form-note">By submitting, you agree to be contacted by Naimish Club.</p>
+        </form>
+      </div>
     </div>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Inquiry</button>
-    </form>
-</section>
+  </section>
 
-<footer>
+  <footer class="footer">
     © 2026 Naimish Club | Hisar, Haryana | All Rights Reserved
-</footer>
+  </footer>
 
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
-</a>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImg" alt="Preview" />
+  </div>
+
+  <script>
+    // Mobile menu
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Lightbox
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightboxImg");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    document.querySelectorAll(".gallery-item").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const src = btn.getAttribute("data-img");
+        lbImg.src = src;
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeLightbox() {
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+      lbImg.src = "";
+    }
+
+    closeBtn.addEventListener("click", closeLightbox);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+  </script>
 
 </body>
 </html>
